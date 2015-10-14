@@ -1,0 +1,43 @@
+﻿/* =========================================================================== */
+/* Info.aspx */
+body.receipt div.info div.table
+{
+    border: 1px solid #DDDDDD;
+}
+
+body.receipt div.info div.table table
+{
+    border: 1px solid Black;
+}
+
+body.receipt div.info div.table td
+{
+    padding: 1px 1px 1px 1px;
+    font-size: 10px;
+}
+body.receipt div.info div.table td.property
+{
+    width: 60px;
+}
+
+body.receipt div.info div.table td.value
+{
+    width: 150px;
+}
+
+body.receipt div.info div.ok
+{
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    margin: 1px 0px 0px 0px;
+    padding: 1px 1px 1px 1px;
+}
+body.receipt div.info div.ok input
+{
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: Green;
+}
+/* =========================================================================== */

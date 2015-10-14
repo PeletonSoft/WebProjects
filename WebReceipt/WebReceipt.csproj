@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D984D754-870A-419F-BE9C-C63C38CDE419}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebReceipt</RootNamespace>
+    <AssemblyName>WebReceipt</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\JLinq\Newtonsoft.Json\bin\Release\Net\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\AndroidV\Custom\SalesHistory.css" />
+    <Content Include="App_Themes\AndroidV\Custom\SearchArticle.css" />
+    <Content Include="App_Themes\AndroidV\Custom\Info.css" />
+    <Content Include="App_Themes\AndroidV\Custom\Select.css" />
+    <Content Include="App_Themes\AndroidV\Custom\Receipt.css" />
+    <Content Include="App_Themes\AndroidV\Custom\Login.css" />
+    <Content Include="App_Themes\AndroidV\Style.css" />
+    <Content Include="App_Themes\BigIpaqV\Custom\Info.css" />
+    <Content Include="App_Themes\BigIpaqV\Custom\Login.css" />
+    <Content Include="App_Themes\BigIpaqV\Custom\Receipt.css" />
+    <Content Include="App_Themes\BigIpaqV\Custom\SalesHistory.css" />
+    <Content Include="App_Themes\BigIpaqV\Custom\SearchArticle.css" />
+    <Content Include="App_Themes\BigIpaqV\Custom\Select.css" />
+    <Content Include="App_Themes\BigIpaqV\Style.css" />
+    <Content Include="App_Themes\IpaqV\Custom\Info.css" />
+    <Content Include="App_Themes\IpaqV\Custom\Login.css" />
+    <Content Include="App_Themes\IpaqV\Custom\Receipt.css" />
+    <Content Include="App_Themes\IpaqV\Custom\SalesHistory.css" />
+    <Content Include="App_Themes\IpaqV\Custom\SearchArticle.css" />
+    <Content Include="App_Themes\IpaqV\Custom\Select.css" />
+    <Content Include="App_Themes\IpaqV\Style.css" />
+    <Content Include="App_Themes\RoverV\Custom\Info.css" />
+    <Content Include="App_Themes\RoverV\Custom\Login.css" />
+    <Content Include="App_Themes\RoverV\Custom\Receipt.css" />
+    <Content Include="App_Themes\RoverV\Custom\SalesHistory.css" />
+    <Content Include="App_Themes\RoverV\Custom\SearchArticle.css" />
+    <Content Include="App_Themes\RoverV\Custom\Select.css" />
+    <Content Include="App_Themes\RoverV\Style.css" />
+    <Content Include="Pages\Default\Main.aspx" />
+    <Content Include="Pages\Default\Script.js" />
+    <Content Include="Pages\Error\601.html" />
+    <Content Include="Pages\Error\602.html" />
+    <Content Include="Pages\Error\603.html" />
+    <Content Include="Pages\Error\604.html" />
+    <Content Include="Pages\Fast\Load.js" />
+    <Content Include="Pages\Fast\Main.aspx" />
+    <Content Include="Pages\Fast\Script.js" />
+    <Content Include="Pages\Login\Load.js" />
+    <Content Include="Pages\Login\Main.aspx" />
+    <Content Include="Pages\Receipt\Images\Panel\search.bmp" />
+    <Content Include="Pages\Receipt\Information.js" />
+    <Content Include="Pages\Receipt\Receipt.js" />
+    <Content Include="Pages\Receipt\Images\Panel\delete.bmp" />
+    <Content Include="Pages\Receipt\Images\Panel\enter.jpg" />
+    <Content Include="Pages\Receipt\Images\Panel\exit.jpg" />
+    <Content Include="Pages\Receipt\Images\Panel\send.bmp" />
+    <Content Include="Pages\Receipt\Images\Grid\delete.GIF" />
+    <Content Include="Pages\Receipt\Images\Grid\info.GIF" />
+    <Content Include="Pages\Receipt\Images\Panel\0.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\1.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\2.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\3.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\4.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\5.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\6.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\7.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\8.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\9.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\back.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\check.bmp" />
+    <Content Include="Pages\Receipt\Images\Panel\dot.gif" />
+    <Content Include="Pages\Receipt\Images\Panel\refresh.bmp" />
+    <Content Include="Pages\Receipt\Images\Panel\undo.bmp" />
+    <Content Include="Pages\Login\Images\1.BMP" />
+    <Content Include="Pages\Login\Images\2.BMP" />
+    <Content Include="Pages\Login\Images\3.BMP" />
+    <Content Include="Pages\Login\Images\4.BMP" />
+    <Content Include="Pages\Login\Images\5.BMP" />
+    <Content Include="Pages\Login\Images\back.jpg" />
+    <Content Include="Pages\Login\Images\enter.jpg" />
+    <Content Include="Pages\Login\Images\exit.jpg" />
+    <Content Include="Pages\Receipt\Main.aspx" />
+    <Content Include="Pages\Receipt\Script.js" />
+    <Content Include="Pages\Receipt\Select.js" />
+    <Content Include="Pages\SalesHistory\Images\enter.jpg" />
+    <Content Include="Pages\SalesHistory\Images\exit.jpg" />
+    <Content Include="Pages\SalesHistory\Main.aspx" />
+    <Content Include="Pages\SalesHistory\Script.js" />
+    <Content Include="Pages\SearchArticle\Images\enter.jpg" />
+    <Content Include="Pages\SearchArticle\Images\exit.jpg" />
+    <Content Include="Pages\SearchArticle\Main.aspx" />
+    <Content Include="Pages\SearchArticle\Script.js" />
+    <Content Include="Scripts\datetime.js" />
+    <Content Include="Scripts\jlinq.js" />
+    <Content Include="Scripts\jquery-addon.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Pages\Login\Script.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Styles\Style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSets\ReceiptClass.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptClass.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Statistic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Statistic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Default\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Default\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Fast\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Fast\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login\Authentication.ashx.cs">
+      <DependentUpon>Authentication.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DBConvert.cs" />
+    <Compile Include="DataSets\LocalService.cs" />
+    <Compile Include="DataSets\Login.cs">
+      <DependentUpon>Login.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Receipt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Receipt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Login.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\Content.ashx.cs">
+      <DependentUpon>Content.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\ContentClear.ashx.cs">
+      <DependentUpon>ContentClear.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\ContentDelete.ashx.cs">
+      <DependentUpon>ContentDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\ContentInsert.ashx.cs">
+      <DependentUpon>ContentInsert.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\ContentSend.ashx.cs">
+      <DependentUpon>ContentSend.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\ContentUpdate.ashx.cs">
+      <DependentUpon>ContentUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\DescriptionByArticleId.ashx.cs">
+      <DependentUpon>DescriptionByArticleId.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\Revise.ashx.cs">
+      <DependentUpon>Revise.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\InfoByPositionId.ashx.cs">
+      <DependentUpon>InfoByPositionId.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\InfoByArticleId.ashx.cs">
+      <DependentUpon>InfoByArticleId.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Receipt\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receipt\ContentSelect.ashx.cs">
+      <DependentUpon>ContentSelect.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesHistory\Content.ashx.cs">
+      <DependentUpon>Content.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesHistory\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SalesHistory\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchArticle\Content.ashx.cs">
+      <DependentUpon>Content.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchArticle\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchArticle\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\Login\SelectShops.ashx.cs">
+      <DependentUpon>SelectShops.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSets\Login.xsc">
+      <DependentUpon>Login.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Login.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Login.xss">
+      <DependentUpon>Login.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Receipt.xsc">
+      <DependentUpon>Receipt.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Receipt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Receipt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Receipt.xss">
+      <DependentUpon>Receipt.xsd</DependentUpon>
+    </None>
+    <Content Include="Pages\Login\SelectShops.ashx" />
+    <Content Include="Pages\Login\Authentication.ashx" />
+    <Content Include="Pages\Receipt\Content.ashx" />
+    <Content Include="Pages\Receipt\ContentUpdate.ashx" />
+    <Content Include="Pages\Receipt\InfoByArticleId.ashx" />
+    <Content Include="Pages\Receipt\ContentInsert.ashx" />
+    <Content Include="Pages\Receipt\ContentDelete.ashx" />
+    <Content Include="Pages\Receipt\ContentSelect.ashx" />
+    <Content Include="Pages\Receipt\InfoByPositionId.ashx" />
+    <Content Include="Pages\Receipt\ContentClear.ashx" />
+    <Content Include="Pages\Receipt\ContentSend.ashx" />
+    <Content Include="Pages\SalesHistory\Content.ashx" />
+    <None Include="DataSets\ReceiptClass.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ReceiptClass.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\Statistic.xsc">
+      <DependentUpon>Statistic.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Statistic.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Statistic.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Statistic.xss">
+      <DependentUpon>Statistic.xsd</DependentUpon>
+    </None>
+    <Content Include="Pages\SearchArticle\Content.ashx" />
+    <Content Include="Pages\Receipt\Revise.ashx" />
+    <Content Include="Pages\Receipt\DescriptionByArticleId.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSets\ReceiptClass.dbml.layout">
+      <DependentUpon>ReceiptClass.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18363</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

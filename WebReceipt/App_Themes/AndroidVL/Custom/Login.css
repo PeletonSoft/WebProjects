@@ -1,0 +1,72 @@
+﻿/* =========================================================================== */
+/* Login.aspx */
+
+body.login div.full
+{
+	width: 480px;
+}
+
+
+body.login div.caption p
+{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    height: 48px;
+}
+
+body.login div.caption
+{
+    margin: 5px 5px 5px 5px;
+}
+
+body.login table.user td
+{
+    padding: 3px;
+    vertical-align: middle;
+}
+
+body.login table.user td.caption
+{
+    font-size: 24px;
+}
+
+body.login table.user td.combobox
+{
+    font-size: 30px;
+
+}
+
+body.login table.user td.combobox select
+{
+    width: 280px;
+    height: 30px;
+    font-size: 22px;
+}
+
+body.login table.user td.combobox input
+{
+    width: 276px;
+    height: 30px;
+    font-size: 22px;
+}
+
+body.login table.button td
+{
+    width: 49px;
+    height: 49px;
+}
+
+body.login table.button td input
+{
+    margin: 5px 5px 5px 5px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+body.login div.error
+{
+    font-size: 26px;
+}
+/* =========================================================================== */

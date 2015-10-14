@@ -1,0 +1,21 @@
+﻿/* =========================================================================== */
+/* Fast.aspx */
+body.fast div.errorText
+{
+    font-weight: bold;
+    font-size: 24px;
+    color: Red;
+}
+
+body.fast table.description
+{
+    font-style: italic;
+    font-size: 14px;
+    color: Green;
+}
+
+body.fast table.description td
+{
+}
+
+/* =========================================================================== */

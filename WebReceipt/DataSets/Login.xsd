@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLogin" targetNamespace="http://tempuri.org/Login.xsd" xmlns:mstns="http://tempuri.org/Login.xsd" xmlns="http://tempuri.org/Login.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DataConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DataConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="taShops" GeneratorDataComponentClassName="taShops" Name="tbShops" UserDataComponentName="taShops">
+            <MainSource>
+              <DbSource ConnectionRef="DataConnectionString (Web.config)" DbObjectName="Магазин00.dbo.Магазины" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT     Код, Название
+FROM         Магазины AS S
+ORDER BY Название</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Название" DataSetColumn="Название" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="taUsers" GeneratorDataComponentClassName="taUsers" Name="tbUsers" UserDataComponentName="taUsers">
+            <MainSource>
+              <DbSource ConnectionRef="DataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     U.[Код], [dbo].[Короткий_ФИО](U.[Код]) AS [ФИО], S.[Код] AS [Код магазина]
+FROM         [Магазины] AS S CROSS APPLY[Консультанты_список](S.[Код]) AS U</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="ФИО" DataSetColumn="ФИО" />
+              <Mapping SourceColumn="Код магазина" DataSetColumn="Код магазина" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLogin" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLogin" msprop:Generator_UserDSName="dsLogin">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbShops" msprop:Generator_TableClassName="tbShopsDataTable" msprop:Generator_TableVarName="tabletbShops" msprop:Generator_TablePropName="tbShops" msprop:Generator_RowDeletingName="tbShopsRowDeleting" msprop:Generator_UserTableName="tbShops" msprop:Generator_RowChangingName="tbShopsRowChanging" msprop:Generator_RowEvHandlerName="tbShopsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbShopsRowDeleted" msprop:Generator_RowEvArgName="tbShopsRowChangeEvent" msprop:Generator_RowChangedName="tbShopsRowChanged" msprop:Generator_RowClassName="tbShopsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Название" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_UserColumnName="Название">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbUsers" msprop:Generator_TableClassName="tbUsersDataTable" msprop:Generator_TableVarName="tabletbUsers" msprop:Generator_TablePropName="tbUsers" msprop:Generator_RowDeletingName="tbUsersRowDeleting" msprop:Generator_UserTableName="tbUsers" msprop:Generator_RowChangingName="tbUsersRowChanging" msprop:Generator_RowEvHandlerName="tbUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="tbUsersRowDeleted" msprop:Generator_RowEvArgName="tbUsersRowChangeEvent" msprop:Generator_RowChangedName="tbUsersRowChanged" msprop:Generator_RowClassName="tbUsersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Код_x0020_магазина" msprop:Generator_ColumnVarNameInTable="columnКод_магазина" msprop:Generator_ColumnPropNameInRow="Код_магазина" msprop:Generator_ColumnPropNameInTable="Код_магазинаColumn" msprop:Generator_UserColumnName="Код магазина" type="xs:int" />
+              <xs:element name="ФИО" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_UserColumnName="ФИО" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbShops" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="tbShops_tbUsers" msdata:parent="tbShops" msdata:child="tbUsers" msdata:parentkey="Код" msdata:childkey="Код_x0020_магазина" msprop:Generator_UserChildTable="tbUsers" msprop:Generator_ChildPropName="GettbUsersRows" msprop:Generator_UserParentTable="tbShops" msprop:Generator_UserRelationName="tbShops_tbUsers" msprop:Generator_RelationVarName="relationtbShops_tbUsers" msprop:Generator_ParentPropName="tbShopsRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Магазин00" Class="ReceiptClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Магазин00ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="Магазины" Member="Магазиныs">
+    <Type Name="Магазины">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Магазины_Консультанты" Member="Консультантыs" ThisKey="Код" OtherKey="Код_магазина" Type="Консультанты" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Консультанты" Member="Консультантыs">
+    <Type Name="Консультанты">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="[Код магазина]" Member="Код_магазина" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Магазины_Консультанты" Member="Магазины" ThisKey="Код_магазина" OtherKey="Код" Type="Магазины" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Сотрудники" Member="Сотрудникиs">
+    <Type Name="Сотрудники">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ассортимент_Ревизия" Member="Ассортимент_Ревизияs">
+    <Type Name="Ассортимент_Ревизия">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Код магазина]" Member="Код_магазина" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Дата начала]" Member="Дата_начала" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Дата окончания]" Member="Дата_окончания" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Количество артикулов]" Member="Количество_артикулов" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Обработано артикулов]" Member="Обработано_артикулов" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Статус" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Характеристики" Member="Характеристикиs">
+    <Type Name="Характеристики">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Код плана]" Member="Код_плана" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код типа значений]" Member="Код_типа_значений" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Постоянный" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Характеристики_Склад_характеристики" Member="Склад_характеристикиs" ThisKey="Код" OtherKey="Код_характеристики" Type="Склад_характеристики" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Склад_характеристики" Member="Склад_характеристикиs">
+    <Type Name="Склад_характеристики">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Код артикула]" Member="Код_артикула" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код характеристики]" Member="Код_характеристики" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код значения]" Member="Код_значения" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Характеристики_Склад_характеристики" Member="Характеристики" ThisKey="Код_характеристики" OtherKey="Код" Type="Характеристики" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Склад_подробно" Member="Склад_подробноs">
+    <Type Name="Склад_подробно">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Артикул" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Группа" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Наценка" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Минимальный остаток]" Member="Минимальный_остаток" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Статус" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Количество" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Вид товара]" Member="Вид_товара" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Производитель" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Страна" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="[Код производителя]" Member="Код_производителя" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код вида товара]" Member="Код_вида_товара" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Прайс" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Поставщик" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[История закупок]" Member="История_закупок" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.КПК_чеки_веб_редактирование" Method="КПК_чеки_веб_редактирование">
+    <Parameter Name="PositionId" Parameter="positionId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="StoreInfoId" Parameter="storeInfoId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ArticleId" Parameter="articleId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Quant" Parameter="quant" Type="System.Double" DbType="Float" Direction="InOut" />
+    <Parameter Name="Discount" Parameter="discount" Type="System.Double" DbType="Float" Direction="InOut" />
+    <Parameter Name="Price" Parameter="price" Type="System.Double" DbType="Float" Direction="InOut" />
+    <Parameter Name="ShopId" Parameter="shopId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReceiptNumber" Parameter="receiptNumber" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Edit" Parameter="edit" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.КПК_чеки_справка_по_артикулу" Method="КПК_чеки_справка_по_артикулу">
+    <Parameter Name="ShopId" Parameter="shopId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ArticleId" Parameter="articleId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PositionId" Parameter="positionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodeError" Parameter="codeError" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Error" Parameter="error" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="Warning" Parameter="warning" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="Messgage" Parameter="messgage" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <Parameter Name="PosCount" Parameter="posCount" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="StoreInfoId" Parameter="storeInfoId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Ассортимент_зал_добавить" Method="Ассортимент_зал_добавить">
+    <Parameter Name="ProductCode" Parameter="productCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ProductPrice" Parameter="productPrice" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ProcessID" Parameter="processID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Характеристики_получить_строку" Method="Характеристики_получить_строку" IsComposable="true">
+    <Parameter Name="CharacteristicId" Parameter="characteristicId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="KeyValue" Parameter="keyValue" Type="System.Int32" DbType="Int" />
+    <Return Type="System.String" />
+  </Function>
+</Database>

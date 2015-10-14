@@ -1,0 +1,91 @@
+﻿/* =========================================================================== */
+/* SearchArticle.aspx */
+body.searcharticle
+{
+    padding: 1px;
+    margin: 0px;
+}
+
+body.searcharticle div.loading
+{
+    font-size: 18px;
+}
+body.searcharticle td
+{
+    vertical-align: middle;
+}
+
+body.searcharticle div.caption
+{
+    border: 1px solid #DDDDDD;
+    margin: 0px 0px 5px 0px;
+}
+
+body.searcharticle div.caption td
+{
+    padding: 1px;
+}
+body.searcharticle div.caption td.text
+{
+    font-size: 11px;
+    width: 100px;
+}
+body.searcharticle div.caption td.input input 
+{
+    width: 75px;
+    height: 16px;    
+    font-size: 12px;
+}
+
+body.searcharticle div.caption td.exit input,
+body.searcharticle div.caption td.enter input
+{
+    width: 20px;
+    height: 20px;
+    border: 1px Solid Blue;
+}
+
+body.searcharticle div.table 
+{
+    border: 1px solid #DDDDDD;
+}
+
+body.searcharticle div.table table
+{
+    border: 1px solid Black;
+}
+
+body.searcharticle div.table div.head td
+{
+    font-size: 10px;
+}
+
+body.searcharticle div.table div.body td
+{
+    font-size: 10px;
+}
+
+body.searcharticle div.table td.articleid
+{
+    width: 40px;
+}
+
+body.searcharticle div.table td.article
+{
+    width: 110px;
+}
+body.searcharticle div.table div.body td.article
+{
+    font-size: 9px;
+}
+
+body.searcharticle div.table td.store
+{
+    width: 40px;
+}
+
+body.searcharticle div.table td.quant
+{
+    width: 40px;
+}
+/* =========================================================================== */

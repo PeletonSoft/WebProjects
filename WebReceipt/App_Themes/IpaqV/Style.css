@@ -1,0 +1,17 @@
+﻿/* =========================================================================== */
+/* общие */
+
+input[disabled],
+.aspNetDisabled
+{
+    background-color: #CCCCCC;
+    color: Black;
+}
+
+.selected
+{
+    border: 2px Solid Blue;
+    background-color: #DDDDFF;
+}
+
+/* =========================================================================== */

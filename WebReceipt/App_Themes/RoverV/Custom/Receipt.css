@@ -1,0 +1,140 @@
+﻿/* =========================================================================== */
+/* Receipt.aspx */
+/* заголовок */
+/* =========================================================================== */
+/* таблица */
+body.receipt
+{
+    padding: 1px;
+    margin: 0px;
+}
+
+body.receipt div.receipt div.table
+{
+    padding: 1px;
+}
+
+body.receipt div.receipt div.table div
+{
+    padding: 0px;
+}
+
+body.receipt div.receipt div.table div.body
+{
+}
+body.receipt div.receipt div.table table
+{
+    border: 1px Solid Black;
+}
+body.receipt div.receipt div.table tr
+{
+    height: 15px;
+}
+
+body.receipt div.receipt div.table td
+{
+    padding: 1px;
+    font-size: 10px;
+}
+body.receipt div.receipt div.table div.head
+{
+    display: none;
+}
+body.receipt div.receipt div.table div.head td
+{
+    font-size: 10px;
+}
+
+body.receipt div.receipt div.table input
+{
+    font-size: 10px;
+}
+
+body.receipt div.receipt div.table td.articleid
+{
+    width: 50px;
+}
+body.receipt div.receipt div.table td.articleid input
+{
+    width: 43px;
+    height: 13px;
+}
+
+body.receipt div.receipt div.table td.quant
+{
+    width: 49px;
+}
+body.receipt div.receipt div.table td.quant input
+{
+    width: 43px;
+    height: 13px;
+}
+body.receipt div.receipt div.table td.discount
+{
+    width: 39px;
+}
+body.receipt div.receipt div.table td.discount input
+{
+    width: 32px;
+    height: 13px;
+}
+
+body.receipt div.receipt div.table td.price
+{
+    width: 52px;
+}
+
+body.receipt div.receipt div.table div.foot td.price
+{
+    font-size: 10px;    
+}
+
+body.receipt div.receipt div.table td.button
+{
+    width: 41px;
+}
+
+body.receipt div.receipt div.table div.foot td.button
+{
+    font-size: 12px;    
+    padding: 0px 0px 0px 0px;
+}
+body.receipt div.receipt div.table div.body td.button
+{
+    padding: 0px 0px 0px 0px;
+}
+
+body.receipt div.receipt div.table div.body td.button input
+{
+    padding: 0px;
+    font-size: 8px;    
+    margin: 1px 1px 1px 1px;
+    width: 15px;
+    height: 15px;
+    border: 1px Solid Blue;
+}
+/* =========================================================================== */
+/* кнопки */
+body.receipt div.receipt table.button
+{
+    margin: 0px;
+    padding: 0px;
+}
+body.receipt div.receipt table.button td
+{
+    padding: 0px;
+}
+body.receipt div.receipt table.button input 
+{
+    width: 25px;
+    height: 25px;
+    border: 1px Solid Blue;
+}
+
+body.receipt div.receipt table.button input.check, 
+body.receipt div.receipt table.button input.send
+{
+    width: 55px;
+    height: 59px;
+}
+/* =========================================================================== */

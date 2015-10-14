@@ -1,0 +1,273 @@
+﻿/* =========================================================================== */
+/* общие */
+
+input[disabled],
+.aspNetDisabled
+{
+    background-color: #CCCCCC;
+    color: Black;
+}
+
+.selected
+{
+    border: 2px Solid Blue;
+    background-color: #DDDDFF;
+}
+
+/* =========================================================================== */
+/* Login.aspx */
+body.login div.caption p
+{
+    margin: 0px 0px 0px 0px;
+}
+
+body.login div.error
+{
+    color: Red;
+    font-weight: bold;
+}
+
+body.login table.user td.caption
+{
+    font-weight: bold;
+    color: Green;
+    vertical-align: middle;  
+}
+
+body.login table.user td.combobox
+{
+    font-weight: normal;
+    color: Black;
+    vertical-align: middle;  
+}
+
+body.login table.user td.combobox input
+{
+    font-weight: bold;
+}
+
+body.login table.button td input
+{
+    margin: 1px 1px 1px 1px;
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================================================== */
+/* Receipt.aspx */
+body.receipt > div
+{
+    display: none;
+}
+
+body.receipt div.receipt div.caption
+{
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+}
+
+/* таблица */
+
+body.receipt div.receipt div.table
+{
+    background-color: #DDDDDD;
+}
+
+body.receipt div.receipt div.table div
+{
+    padding: 0px;
+    background-color: White;
+}
+
+body.receipt div.receipt div.table div.head table
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+body.receipt div.receipt div.table td
+{
+    vertical-align: middle;
+}
+
+body.receipt div.receipt div.table div.body td.price
+{
+    text-align: right;    
+}
+
+body.receipt div.receipt div.table div.foot td.price
+{
+    text-align: right;    
+    font-weight: bold;
+    color: Red;
+    border: 1px Solid Black;
+}
+
+body.receipt div.receipt div.table div.foot td.button
+{
+    text-align: center;
+    font-weight: bold;
+    color: Black;
+}
+
+body.receipt div.receipt div.table div.body td.button input
+{
+    padding: 0px;
+    border: 1px Solid Blue;
+}
+/* =========================================================================== */
+/* кнопки */
+body.receipt div.receipt table.button input 
+{
+    border: 1px Solid Blue;
+}
+
+/* =========================================================================== */
+/* Select.aspx */ 
+body.receipt div.select div.caption p
+{
+    margin: 0px 0px 0px 0px;
+}
+body.receipt div.select div.table
+{
+    background-color: #DDDDDD;    
+}
+
+body.receipt div.select div.table table
+{
+    border: 1px Solid Black;
+}
+
+body.receipt div.select div.table div
+{
+    padding: 0px;
+    background-color: White;
+}
+
+body.receipt div.select div.table div.head table
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+body.receipt div.select div.table div.body td.attr
+{
+    text-align: center;
+}
+
+body.receipt div.select div.table div.body td.attrinfo
+{
+    text-align: center;
+}
+
+body.receipt div.select div.table div.body td.store
+{
+    text-align: center;
+}
+
+body.receipt div.select div.table div.body td.quant
+{
+    text-align: center;
+    font-weight: bold;
+}
+/* =========================================================================== */
+/* Info.aspx */
+body.receipt div.info div.table
+{
+    vertical-align: middle;
+}
+body.receipt div.info div.table td.property
+{
+    text-align: center;
+    font-weight: bold;
+}
+body.receipt div.info div.table td.value
+{
+    text-align: left;
+}
+/*
+body.receipt div.info div.table tr.articleid td.value,
+body.receipt div.info div.table tr.attr td.value,
+body.receipt div.info div.table tr.attrinfo td.value,
+body.receipt div.info div.table tr.type td.value,
+body.receipt div.info div.table tr.store td.value,
+body.receipt div.info div.table tr.group td.value,
+body.receipt div.info div.table tr.state td.value,
+body.receipt div.info div.table tr.pie td.value
+{
+    text-align: center;
+}
+
+body.receipt div.info div.table tr.price td.value,
+body.receipt div.info div.table tr.quant td.value
+{
+    text-align: right;
+}
+*/
+/* =========================================================================== */
+/* SalesHistory.aspx */
+body.saleshistory div.loading,
+body.saleshistory div.table
+{
+    display: none;
+}
+
+body.saleshistory div.table div.head
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+body.saleshistory div.table div.body
+{
+    text-align: center;
+}
+
+body.saleshistory div.table td.quant
+{
+    font-weight: bold;
+}
+body.saleshistory div.loading
+{
+    font-weight: bold;
+}
+
+/* =========================================================================== */
+/* SearchArticle.aspx */
+body.searcharticle div.loading,
+body.searcharticle div.table
+{
+    display: none;
+}
+
+body.searcharticle div.table table
+{
+    border: 1px Solid Black;
+}
+
+body.searcharticle div.table div.head
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+body.searcharticle div.table div.body
+{
+    text-align: center;
+}
+
+body.searcharticle div.table td.quant
+{
+    font-weight: bold;
+}
+body.searcharticle div.loading
+{
+    font-weight: bold;
+}
+body.searcharticle div.table div.body td.article
+{
+    text-align: left;
+}
+/* =========================================================================== */

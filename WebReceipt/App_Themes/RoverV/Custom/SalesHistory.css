@@ -1,0 +1,91 @@
+﻿/* =========================================================================== */
+/* SalesHistory.aspx */
+body.saleshistory
+{
+    padding: 1px;
+    margin: 0px;
+}
+
+body.saleshistory div.loading
+{
+    font-size: 18px;
+}
+body.saleshistory td
+{
+    vertical-align: middle;
+}
+
+body.saleshistory div.caption
+{
+    border: 1px solid #DDDDDD;
+    margin: 0px 0px 5px 0px;
+}
+
+body.saleshistory div.caption td
+{
+    padding: 1px;
+}
+body.saleshistory div.caption td.text
+{
+    font-size: 11px;
+    width: 135px;
+}
+body.saleshistory div.caption td.input input 
+{
+    width: 37px;
+    height: 16px;    
+    font-size: 12px;
+}
+
+body.saleshistory div.caption td.exit input,
+body.saleshistory div.caption td.enter input
+{
+    width: 20px;
+    height: 20px;
+    border: 1px Solid Blue;
+}
+
+body.saleshistory div.table 
+{
+    border: 1px solid #DDDDDD;
+}
+
+body.saleshistory div.table table
+{
+    border: 1px solid Black;
+}
+
+body.saleshistory div.table div.head td
+{
+    font-size: 10px;
+}
+
+body.saleshistory div.table div.body td
+{
+    font-size: 10px;
+}
+
+body.saleshistory div.table td.date
+{
+    width: 65px;
+}
+body.saleshistory div.table td.attr
+{
+    display: none;    
+}
+
+body.saleshistory div.table td.attrinfo
+{
+    width: 60px;
+}
+
+body.saleshistory div.table td.receiptnumber
+{
+    width: 60px;
+}
+
+body.saleshistory div.table td.quant
+{
+    width: 40px;
+}
+/* =========================================================================== */

@@ -1,0 +1,89 @@
+﻿/* =========================================================================== */
+/* Select.aspx */ 
+
+body.receipt div.select div.caption p
+{
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+body.receipt div.select div.caption
+{
+    margin: 0px;
+    padding: 1px;    
+}
+body.receipt div.select div.table
+{
+    border: 1px solid #DDDDDD;
+    padding: 0px;
+}
+
+body.receipt div.select div.table div
+{
+    padding: 0px;
+}
+
+body.receipt div.select div.table div.body
+{
+}
+
+body.receipt div.select div.table tr
+{
+    height: 20px;
+}
+
+body.receipt div.select div.table td
+{
+    padding: 1px;
+    font-size: 12px;
+}
+
+body.receipt div.select div.table div.head td
+{
+    font-size: 12px;
+}
+
+body.receipt div.select div.table td.attr
+{
+    width: 50px;
+}
+body.receipt div.select div.table td.attrinfo
+{
+    width: 62px;
+}
+
+body.receipt div.select div.table td.store
+{
+    width: 50px;
+}
+
+body.receipt div.select div.table td.quant
+{
+    width: 55px;
+}
+
+body.receipt div.select table.button
+{
+    border: 1px solid #DDDDDD;
+    margin: 1px 0 0;
+    padding: 1px 0 0;
+}
+
+body.receipt div.select table.button input
+{
+    width: 111px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+}
+body.receipt div.select table.button td.ok input
+{
+    color: Green;
+}
+body.receipt div.select table.button td.cancel input
+{
+    color: Red;
+}
+
+/* =========================================================================== */

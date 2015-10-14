@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Магазин00" Class="ShopDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Магазин00ConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.Оповещение_аренда" Method="Оповещение_аренда">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShopId" Parameter="shopId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Port" Parameter="port" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="NoticeTypeId" Parameter="noticeTypeId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

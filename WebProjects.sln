@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notify", "Notify\Notify.csproj", "{B58E2D37-C672-4999-878C-D92E8EEAB472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReceipt", "WebReceipt\WebReceipt.csproj", "{D984D754-870A-419F-BE9C-C63C38CDE419}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B58E2D37-C672-4999-878C-D92E8EEAB472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58E2D37-C672-4999-878C-D92E8EEAB472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58E2D37-C672-4999-878C-D92E8EEAB472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58E2D37-C672-4999-878C-D92E8EEAB472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D984D754-870A-419F-BE9C-C63C38CDE419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D984D754-870A-419F-BE9C-C63C38CDE419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D984D754-870A-419F-BE9C-C63C38CDE419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D984D754-870A-419F-BE9C-C63C38CDE419}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
